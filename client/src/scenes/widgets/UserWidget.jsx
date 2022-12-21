@@ -23,7 +23,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const getUser = async () => {
     const response = await fetch(
-      `https://backend-server-social-media.onrender.com/users/${userId}`,
+      `https://backend-server-social-media.onrender.com/profile/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
