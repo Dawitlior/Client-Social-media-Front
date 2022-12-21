@@ -23,7 +23,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const getUser = async () => {
     const response = await fetch(
-      `https://backend-server-social-media.onrender.com/users/${userId}`,
+      `https://backend-server-social-media.onrender.com/profile/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -57,11 +57,7 @@ const UserWidget = ({ userId, picturePath }) => {
       <FlexBetween
         gap="0.5rem"
         pb="1.1rem"
-        onClick={() =>
-          navigate(
-            `https://backend-server-social-media.onrender.com/users/${userId}`
-          )
-        }
+        onClick={() => navigate(`/profile/${userId}`)}
       >
         <FlexBetween gap="1rem">
           <UserImage image={picturePath} />
